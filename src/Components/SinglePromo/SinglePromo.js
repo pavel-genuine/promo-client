@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { Grid, Dropdown, Modal, Header, Item, Card, Image, Form, Checkbox, Button, Icon } from 'semantic-ui-react';
+import { io } from 'socket.io-client';
 import Update from '../Update/Update';
+
+
+const socket = io.connect("http://localhost:5000/")
 
 
 const SinglePromo = () => {
@@ -14,6 +18,9 @@ const SinglePromo = () => {
 
     const handleSubmit = (e) => {
         console.log(e);
+        socket.emit()
+
+        
     }
 
     return (
